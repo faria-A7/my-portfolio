@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 1rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  color: #00bfff;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem; /* Add this to reduce space between text & photo */
+  flex-wrap: wrap;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 0.3rem; /* reduce bottom spacing */
+}
+.hero-text h2 {
+  font-size: 2.2rem;   /* Increased size */
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.hero-image img {
+  width: 300px; /* Previously was 280px */
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+.socials a {
+  margin-right: 1rem;
+  color: #999;
+  text-decoration: none;
+}
+.socials a:hover {
+  color: #00ffff;
+}
+.about {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about p {
+  line-height: 1.6;
+}
