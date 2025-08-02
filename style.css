@@ -28,6 +28,83 @@ body {
   z-index: 1000;
 }
 
+/* Position settings icon and toggle side by side */
+.navbar > div:first-child {
+  margin-right: 1rem;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle .theme-switch {
+  display: none; /* Hide the checkbox */
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background-color: #666;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle label::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.theme-toggle .theme-switch:checked + label {
+  background-color: #00bfff; /* Light theme indicator */
+}
+
+.theme-toggle .theme-switch:checked + label::after {
+  transform: translateX(20px); /* Move toggle to right when checked */
+}
+
+/* Theme variables */
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #fff;
+  --secondary-text: #666;
+  --link-color: #ADD8E6;
+  --link-hover: #00bfff;
+  --header-color: #00bfff;
+}
+
+/* Light theme */
+body.light-theme {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --secondary-text: #666;
+  --link-color: #0066cc;
+  --link-hover: #003366;
+  --header-color: #0066cc;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -42,6 +119,53 @@ body {
 
 .nav-links a:hover {
   color: #00bfff;
+}
+
+/* Apply variables to other elements */
+.nav-links a {
+  color: var(--link-color);
+}
+
+.nav-links a:hover {
+  color: var(--link-hover);
+}
+
+.hero-text h1 {
+  color: var(--header-color);
+}
+
+.about h2, .experience h2, .education h2, .technical-skills h2, .portfolio h2 {
+  color: var(--header-color);
+}
+
+.about p, .experience-item p, .education-item p, .project-item p {
+  color: var(--secondary-text);
+}
+
+.portfolio-item a {
+  color: var(--link-color);
+}
+
+.portfolio-item a:hover {
+  color: var(--link-hover);
+}
+
+/* Update other sections similarly (e.g., .contact, .copyright) */
+.contact h2 {
+  color: var(--header-color);
+}
+
+.contact-links a {
+  color: var(--link-color);
+}
+
+.contact-links a:hover {
+  color: var(--link-hover);
+}
+
+.contact-links .fas,
+.contact-links .fab {
+  color: inherit;
 }
 
 .hero {

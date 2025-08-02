@@ -9,6 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const description = link.getAttribute('data-description');
       const linksArray = JSON.parse(link.getAttribute('data-links') || '[]');
 
+      // Check localStorage for saved theme preference
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-theme');
+    themeSwitch.checked = true;
+  }
+
+  // Toggle theme on switch change
+  themeSwitch.addEventListener('change', () => {
+    if (themeSwitch.checked) {
+      body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      body.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
+    }
+
       // Remove existing popup if any
       if (currentPopup) currentPopup.remove();
 
@@ -49,7 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
           popup.remove();
           currentPopup = null;
         }
+        
       });
     });
+  });
   });
 });
