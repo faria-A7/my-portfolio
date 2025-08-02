@@ -131,7 +131,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -0.5rem;
-  width: 50px;
+  width: 1000px;
   height: 2px;
   background-color: #00bfff;
   transform: translateX(-50%);
@@ -139,9 +139,9 @@ body {
 
 .about h2 { color: #007bff; }
 .experience h2 { color: #00bfff; }
-.education h2 { color: #ff4500; }
+.education h2 { color: #00bfff; }
 .technical-skills h2 { color: #ff4500; }
-.portfolio h2 { color: #00ff00; }
+.portfolio h2 { color: #00bfff; }
 
 .about p, .experience-item p, .education-item p, .project-item p {
   line-height: 1.6;
@@ -198,7 +198,7 @@ body {
   position: absolute;
   left: 50%;
   bottom: -0.5rem;
-  width: 50px;
+  width: 1000px;
   height: 2px;
   background-color: #ff4500;
   transform: translateX(-50%);
@@ -261,7 +261,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   position: relative;
-  color: #00ff00;
+  color: #00bfff;
 }
 
 .portfolio h2::after {
@@ -269,9 +269,9 @@ body {
   position: absolute;
   left: 50%;
   bottom: -0.5rem;
-  width: 50px;
+  width: 1000px;
   height: 2px;
-  background-color: #00ff00;
+  background-color: #ff8400;
   transform: translateX(-50%);
 }
 
@@ -282,7 +282,7 @@ body {
 .portfolio-category h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #00bfff;
+  color: #ff8400;
 }
 
 .portfolio-item {
@@ -314,29 +314,45 @@ body {
 .award-link {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
-.award-link::after {
-  content: '';
-  position: absolute;
-  bottom: -100%;
+.award-link .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  opacity: 0;
-  transition: opacity 0.3s, width 0.3s, height 0.3s;
-  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  max-width: 400px;
+  text-align: left;
+  color: #fff;
 }
 
-.award-link:hover::after {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-  /* No background-image here; handled by JavaScript */
+.award-link .popup img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
+.award-link .popup p {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.award-link .popup a {
+  color: #ADD8E6;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.award-link .popup a:hover {
+  color: #00bfff;
+}
 .portfolio-item a.award-link strong {
   color: #ADD8E6;
 }

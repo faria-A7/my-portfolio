@@ -1,28 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
   const links = document.querySelectorAll('.award-link');
+  let currentPopup = null;
+
   links.forEach(link => {
-    link.addEventListener('mouseover', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
       const imagePath = link.getAttribute('data-image');
-      link.style.position = 'relative';
+      const description = link.getAttribute('data-description');
+      const linksArray = JSON.parse(link.getAttribute('data-links') || '[]');
+
+      // Remove existing popup if any
+      if (currentPopup) currentPopup.remove();
+
+      // Create new popup
       const popup = document.createElement('div');
-      popup.style.position = 'absolute';
-      popup.style.bottom = '-100%';
-      popup.style.left = '50%';
-      popup.style.transform = 'translateX(-50%)';
-      popup.style.width = '200px';
-      popup.style.height = '200px';
-      popup.style.backgroundImage = `url('../images/${imagePath}')`;
-      popup.style.backgroundSize = 'contain';
-      popup.style.backgroundRepeat = 'no-repeat';
-      popup.style.opacity = '1';
-      popup.style.transition = 'opacity 0.3s';
-      popup.style.pointerEvents = 'none';
-      popup.style.zIndex = '1000';
-      link.appendChild(popup);
-    });
-    link.addEventListener('mouseout', () => {
-      const popup = link.querySelector('div');
-      if (popup) popup.remove();
+      popup.className = 'popup';
+
+      // Add image
+      const img = document.createElement('img');
+      img.src = imagePath;
+      popup.appendChild(img);
+
+      // Add description
+      const desc = document.createElement('p');
+      desc.textContent = description;
+      popup.appendChild(desc);
+
+      // Add links
+      if (linksArray.length > 0) {
+        const linksDiv = document.createElement('div');
+        linksArray.forEach(linkUrl => {
+          const a = document.createElement('a');
+          a.href = linkUrl;
+          a.textContent = linkUrl;
+          a.target = '_blank';
+          linksDiv.appendChild(a);
+        });
+        popup.appendChild(linksDiv);
+      }
+
+      // Append to body and store reference
+      document.body.appendChild(popup);
+      currentPopup = popup;
+
+      // Close on click outside
+      document.addEventListener('click', (closeEvent) => {
+        if (!popup.contains(closeEvent.target) && closeEvent.target !== link) {
+          popup.remove();
+          currentPopup = null;
+        }
+      });
     });
   });
 });
