@@ -313,60 +313,33 @@ body {
   color: #00bfff;
 }
 
-/* Award link image popup styles - Simplified since JavaScript handles the image */
-.award-link {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+/* ========== Card Grid Columns ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  padding: 10px;
 }
 
-.award-link .popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #1a1a1a;
+/* ========== Card Styling ========== */
+.award-card {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  max-width: 40vw; /* 90% of viewport width */
-  max-height: 30vh; /* 80% of viewport height */
-  overflow-y: auto; /* Scroll if content exceeds height */
-  text-align: left;
   color: #fff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
 }
 
-.award-link .popup img {
-  max-width: 40%; /* Ensure image fits within popup width */
-  max-height: 10vh; /* Limit image height to 50% of viewport height */
-  border-radius: 5px;
-  margin-bottom: 50px;
-  display: block; /* Remove any inline spacing */
+.award-card:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-6px);
 }
 
-.award-link .popup p {
-  margin: 5px 0;
-  color: #ccc;
-}
-
-.award-link .popup a {
-  color: #ADD8E6;
-  text-decoration: none;
-  margin-right: 5px;
-}
-
-.award-link .popup a:hover {
-  color: #00bfff;
-}
-.portfolio-item a.award-link strong {
-  color: #ADD8E6;
-}
-
-
-
-/* ... (keep all previous styles unchanged) ... */
 
 .contact {
   margin-top: 2rem;
