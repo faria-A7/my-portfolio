@@ -190,7 +190,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   position: relative;
-  color: #ff4500;
+  color: #ff8400;
 }
 
 .technical-skills h2::after {
@@ -200,7 +200,7 @@ body {
   bottom: -0.5rem;
   width: 1000px;
   height: 2px;
-  background-color: #ff4500;
+  background-color: #ff8400;
   transform: translateX(-50%);
 }
 
@@ -271,7 +271,8 @@ body {
   bottom: -0.5rem;
   width: 1000px;
   height: 2px;
-  background-color: #ff8400;
+  background-color: #00bfff;
+;
   transform: translateX(-50%);
 }
 
@@ -328,30 +329,30 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  max-width: 50vw; /* 90% of viewport width */
-  max-height: 40vh; /* 80% of viewport height */
+  max-width: 40vw; /* 90% of viewport width */
+  max-height: 30vh; /* 80% of viewport height */
   overflow-y: auto; /* Scroll if content exceeds height */
   text-align: left;
   color: #fff;
 }
 
 .award-link .popup img {
-  max-width: 50%; /* Ensure image fits within popup width */
-  max-height: 20vh; /* Limit image height to 50% of viewport height */
+  max-width: 40%; /* Ensure image fits within popup width */
+  max-height: 10vh; /* Limit image height to 50% of viewport height */
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   display: block; /* Remove any inline spacing */
 }
 
 .award-link .popup p {
-  margin: 10px 0;
+  margin: 5px 0;
   color: #ccc;
 }
 
 .award-link .popup a {
   color: #ADD8E6;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .award-link .popup a:hover {
@@ -360,6 +361,83 @@ body {
 .portfolio-item a.award-link strong {
   color: #ADD8E6;
 }
+
+
+
+/* ... (keep all previous styles unchanged) ... */
+
+.contact {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #00ff00; /* Matches portfolio header color */
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  width: 1000px;
+  height: 2px;
+  background-color: #00ff00;
+  transform: translateX(-50%);
+}
+
+/* ... (keep all previous styles unchanged until .contact-links) ... */
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  color: #ADD8E6;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #00bfff;
+}
+
+.contact-links .fas,
+.contact-links .fab {
+  color: inherit; /* Default to link color unless overridden */
+}
+
+/* Authentic colors for all contact icons */
+.contact-links a .fas.fa-envelope { color: #D44638; } /* Official email red */
+.contact-links a .fab.fa-linkedin { color: #0077B5; } /* Official LinkedIn blue */
+.contact-links a .fab.fa-github { color: #171515; } /* Official GitHub black */
+.contact-links a .fab.fa-google { color: #4285F4; } /* Official Google blue */
+.contact-links a .fab.fa-researchgate { color: #00CCBB; } /* Official ResearchGate teal */
+.contact-links a .fab.fa-kaggle { color: #20BEFF; } /* Official Kaggle blue */
+.contact-links a .fab.fa-facebook { color: #1877F2; } /* Official Facebook blue */
+.contact-links a .fab.fa-wordpress { color: #21759B; } /* Official WordPress blue */
+
+
+.copyright {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* ... (keep remaining styles unchanged) ... */
+
+
 
 @media (max-width: 768px) {
   .hero {
