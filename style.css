@@ -131,17 +131,17 @@ body {
   position: absolute;
   left: 50%;
   bottom: -0.5rem;
-  width: 1000px;
+  width: 50px; /* Corrected from 1000px */
   height: 2px;
   background-color: #00bfff;
   transform: translateX(-50%);
 }
 
-.about h2 { color: #00bfff; }
+.about h2 { color: #007bff; }
 .experience h2 { color: #00bfff; }
-.education h2 { color: #00bfff; }
+.education h2 { color: #ff4500; }
 .technical-skills h2 { color: #ff4500; }
-.portfolio h2 { color: #00bfff; }
+.portfolio h2 { color: #00ff00; }
 
 .about p, .experience-item p, .education-item p, .project-item p {
   line-height: 1.6;
@@ -159,12 +159,12 @@ body {
 }
 
 .experience-item a {
-  color: #ADD8E6; /* Light blue color */
-  text-decoration: none; /* Optional: removes underline if desired */
+  color: #ADD8E6;
+  text-decoration: none;
 }
 
 .experience-item a:hover {
-  color: #00bfff; /* Optional: changes to your theme's cyan on hover */
+  color: #00bfff;
 }
 
 .skills-category {
@@ -176,8 +176,6 @@ body {
   margin-bottom: 0.5rem;
   color: #00bfff;
 }
-
-/* ... (keep all previous styles unchanged until .technical-skills) ... */
 
 .technical-skills {
   margin-top: 2rem;
@@ -200,28 +198,18 @@ body {
   position: absolute;
   left: 50%;
   bottom: -0.5rem;
-  width: 1000px;
+  width: 50px; /* Corrected from 1000px */
   height: 2px;
   background-color: #ff4500;
   transform: translateX(-50%);
 }
 
-.skills-category {
-  margin-bottom: 2rem;
-}
-
-.skills-category h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #00bfff;
-}
-
 .skills-list {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 1rem;
-  max-width: 600px; /* Optional: constrain width for better alignment */
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -239,7 +227,6 @@ body {
   margin-right: 0.5rem;
 }
 
-/* Authentic brand colors for each skill (unchanged) */
 .skill-item i.fab.fa-python { color: #3776AB; }
 .skill-item i.fab.fa-java { color: #007396; }
 .skill-item i.fab.fa-cuttlefish { color: #00599C; }
@@ -260,11 +247,6 @@ body {
 .skill-item i.fab.fa-windows { color: #00A4EF; }
 .skill-item i.fab.fa-figma { color: #F24E1E; }
 .skill-item i.fas.fa-file-alt { color: #008080; }
-
-/* ... (keep all other styles unchanged) ... */
-
-
-/* ... (keep all previous styles unchanged until .portfolio) ... */
 
 .portfolio {
   margin-top: 2rem;
@@ -320,12 +302,12 @@ body {
 }
 
 .portfolio-item a {
-  color: #ADD8E6; /* Light blue for links */
+  color: #ADD8E6;
   text-decoration: none;
 }
 
 .portfolio-item a:hover {
-  color: #00bfff; /* Theme cyan on hover */
+  color: #00bfff;
 }
 
 /* Award link image popup styles */
@@ -342,7 +324,6 @@ body {
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  background-image: url('');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -352,20 +333,15 @@ body {
 }
 
 .award-link:hover::after {
-  width: 200px; /* Larger image size */
+  width: 200px;
   height: 200px;
   opacity: 1;
-  background-image: url('../images/' + attr(data-image)); /* Adjust path */
+  background-image: url('../images/' + attr(data-image)); /* Note: This syntax is incorrect; see workaround below */
 }
 
 .portfolio-item a.award-link strong {
   color: #ADD8E6;
 }
-
-/* ... (keep all other styles unchanged) ... */
-
-
-
 
 @media (max-width: 768px) {
   .hero {
