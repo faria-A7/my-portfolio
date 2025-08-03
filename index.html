@@ -64,9 +64,32 @@
       <p><strong>United International University</strong></p>
       <p>- Year: 2020 - 2024</p>
       <p>- Major: Data Science</p>
+      <p>- Aggregate percentage result: 90.1 / 100%</p>
       <p>- CGPA: 3.58 / 4.00 (Thesis CGPA: 4.00 / 4.00)</p>
       <p>- Credit Completed: 137/137</p>
       <p>- Notable courses: Machine Learning, Digital Image Processing, Data Mining, Human-Computer Interaction, Software Architecture. </p>
+      <br>
+      <!-- Undergraduate Thesis Card -->
+<div class="portfolio-card" onclick="openModal('modalThesis')">
+  <img src="Images/my_thesis.jpeg" alt="Undergraduate Thesis">
+  <div class="card-content">
+    <h4>Undergraduate Thesis</h4>
+    <p>NBIAD-8: A Hybrid Deep Learning Approach</p>
+  </div>
+</div>
+
+<!-- Modal for Undergraduate Thesis -->
+<div id="modalThesis" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalThesis')">&times;</span>
+    <h3>Undergraduate Thesis</h3>
+    <h4>NBIAD-8: A Hybrid Deep Learning Approach with Interpretable Insights to Detect Pedestrian Non-Compliance Behavior for Road Safety</h4>
+    <p><strong>- Overview:</strong> Developed a hybrid deep learning pipeline using "YOLOv12" and "Swin-T" to detect pedestrian non-compliance behavior in Dhaka’s traffic environments.</p>
+    <p><strong>- Dataset:</strong> Our own real-world annotated image dataset containing more than 5,000 images of pedestrians on the city roads.</p>
+    <p><strong>- Models:</strong> Implemented a couple of Deep Learning models and Interpretable AI for transparency and accuracy.</p>
+  </div>
+</div>
+
     </div>
   </section>
 
@@ -279,7 +302,27 @@
 </section>
 
 
-<script src="script.js"></script>
+<script src="script.js">
+  // === Modal Popup Handler ===
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+// Optional: Close modal when clicking outside content
+window.onclick = function (event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
+
+</script>
 </section>
 </body>
 </html>
