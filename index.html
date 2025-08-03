@@ -16,6 +16,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#cv">CV</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -59,12 +60,13 @@
     <h2>Education</h2>
     <div style="margin-bottom: 2rem;"></div>
     <div class="education-item">
-      <h3>BSc. in Computer Science and Engineering (Major: Data Science)</h3>
-      <p><strong>United International University</strong> (2020 - 2024) </p>
+      <h3>Bachelor of Science, Computer Science and Engineering</h3>
+      <p><strong>United International University</strong></p>
+      <p>- Year: 2020 - 2024</p>
+      <p>- Major: Data Science</p>
       <p>- CGPA: 3.58 / 4.00 (Thesis CGPA: 4.00 / 4.00)</p>
       <p>- Credit Completed: 137/137</p>
       <p>- Notable courses: Machine Learning, Digital Image Processing, Data Mining, Human-Computer Interaction, Software Architecture. </p>
-      <p>- Achieved a placement in the top 6% of the department, earning a 50% Merit Scholarship for academic excellence.</p>
     </div>
   </section>
 
@@ -120,18 +122,35 @@
   <section class="portfolio" id="portfolio">
   <h2>Portfolio</h2>
   <div style="margin-bottom: 2rem;"></div>
-  <div class="portfolio-category">
-    <h3>Publications</h3>
-    <div class="portfolio-item">
-      <h4>Published Journals and Conferences</h4>
-      <p> <a href="https://doi.org/10.1109/ACCESS.2024.3524676">SafeTrax: Smart Collision Prediction and Alert System Using IoT for Sustainable Traffic Safety, IEEE Access Journals, 2024</a></p>
-    </div>
-    <div class="portfolio-item">
-      <h4>In-Progress</h4>
-      <p>1. NBIAD-8: A Hybrid Deep Learning Approach with Interpretable Insights to Detect Pedestrian Non-Compliance Behavior for Road Safety, <a href="https://www.sciencedirect.com/journal/transportation-research-part-c-emerging-technologies">Research Part C: Emerging Technologies</a></p>
-      <p>2. ROWA-6: Deep Learning Based Roadside Obstruction Detection for Width Reduction Analysis & Traffic Optimization</p>
+  <!-- === Publications Subsection === -->
+<div class="portfolio-category publications-sub">
+  <h3>📝 Publications</h3>
+
+  <!-- Published -->
+  <div class="pub-category">
+    <h4>Published Journals and Conferences</h4>
+
+    <div class="pub-item">
+      <h5>SafeTrax: Smart Collision Prediction and Alert System Using IoT for Sustainable Traffic Safety</h5>
+      <img src="images/safetrax.png" alt="SafeTrax Paper" class="pub-img">
+      <a href="https://doi.org/10.1109/ACCESS.2024.3524676" class="pub-btn" target="_blank">See Journal</a>
     </div>
   </div>
+
+  <!-- In Progress -->
+  <div class="pub-category">
+    <h4>In-Progress</h4>
+
+    <div class="pub-item">
+      <h5>1. NBIAD-8: A Hybrid Deep Learning Approach with Interpretable Insights to Detect Pedestrian Non-Compliance Behavior for Road Safety</h5>
+    </div>
+
+    <div class="pub-item">
+      <h5>2. ROWA-6: Deep Learning Based Roadside Obstruction Detection for Width Reduction Analysis & Traffic Optimization</h5>
+    </div>
+  </div>
+</div>
+
   <div class="portfolio-category">
     <h3>Academic Projects</h3>
     <div class="portfolio-item">
@@ -179,6 +198,66 @@
   </div>
 </div>
 
+
+
+<!-- Modal 1: Scholarship -->
+<div id="modal1" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+    <h2>50% Merit Scholarship, UIU</h2>
+    <img src="images/uiu.jpg" alt="Scholarship" class="modal-img">
+    <p>Awarded for being in the top 6% of CSE department based on academic performance at United International University.</p>
+    <a href="https://uiu.ac.bd" class="modal-btn" target="_blank">Visit UIU</a>
+  </div>
+</div>
+
+<!-- Modal 2: Project Show -->
+<div id="modal2" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+    <h2>2nd Runner-Up, UIU CSE Project Show - Fall 2024</h2>
+    <img src="images/TeamPedsVision_FYDP-1_2nd_Runner_up.JPG" alt="Project Show" class="modal-img">
+    <p>Ranked 2nd Runner-Up among 40+ university submissions for our research-based thesis work.</p>
+    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1736497299735/single-media-viewer/" class="modal-btn" target="_blank">View Here</a>
+  </div>
+</div>
+
+<!-- Modal 3: English Edge -->
+<div id="modal3" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+    <h2>2nd Runner-Up, English Edge Competition 2021</h2>
+    <img src="images/Prize Giving.jpg" alt="English Edge" class="modal-img">
+    <p>Placed top 3 among 250+ participants for exceptional public speaking and communication performance.</p>
+    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1635468519123/single-media-viewer/" class="modal-btn" target="_blank">View Certificate</a>
+  </div>
+</div>
+
+<!-- Modal 4: Research Grant -->
+<div id="modal4" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+    <h2>200,000 BDT Research Grant from IAR, UIU</h2>
+    <img src="images/IAR.jpeg" alt="Grant Award" class="modal-img">
+    <p>Our research "SafeTrax Smart Collision Prediction and Alert System Using IoT for Sustainable Traffic Safety" has received funding of 200,000.00 BDT (2000$) from the Institute for Advanced Research (IAR), United International University.</p>
+    <a href="https://doi.org/10.1109/ACCESS.2024.3524676" class="modal-btn" target="_blank">Early Access (IEEE Access - Q1)</a>
+  </div>
+</div>
+
+
+<section id="cv" class="cv-section">
+  <h3>📄 Curriculum Vitae</h3>
+
+  <!-- Download CV Button -->
+  <a href="files/Faria_Akter_CV.pdf" class="cv-download-btn" download>
+    <i class="fas fa-download"></i> Download My CV
+  </a>
+
+  <!-- Embedded PDF Preview -->
+  <div class="cv-preview">
+    <iframe src="files/Faria_Akter_CV.pdf" frameborder="0" width="100%" height="500px"></iframe>
+  </div>
+</section>
   
 
 

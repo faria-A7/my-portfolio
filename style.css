@@ -313,6 +313,65 @@ body {
   color: #00bfff;
 }
 
+
+
+/* === Publications Inside Portfolio === */
+.publications-sub h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00bfff;
+  text-align: center;
+}
+
+.pub-category {
+  margin-top: 30px;
+}
+
+.pub-category h4 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.pub-item {
+  margin-bottom: 30px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.pub-item h5 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #3b89ff;
+}
+
+.pub-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 12px;
+}
+
+.pub-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #00bfff;
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pub-btn:hover {
+  background-color: #008fc7;
+  color: #fff;
+}
+
+
 /* ========== Card Grid Columns ========== */
 .card-grid {
   display: grid;
@@ -339,6 +398,137 @@ body {
   background-color: #2a2a2a;
   transform: translateY(-6px);
 }
+
+
+
+/* ===== Modal Container ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ===== Modal Content Box ===== */
+.modal-content {
+  background-color: #111;
+  margin: 8% auto;
+  padding: 24px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInModal 0.7s ease forwards;
+}
+
+/* ===== Animate Modal ===== */
+@keyframes fadeInModal {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.modal-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00bfff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.modal-btn:hover {
+  background-color: #008fc7;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* ===== Card Hover Animation ===== */
+.award-card {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.award-card:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-8px) scale(1.03);
+}
+
+
+/* ===== CV Section ===== */
+.cv-section {
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.cv-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+.cv-download-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #00bfff;
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.cv-download-btn:hover {
+  background-color: #009edb;
+  color: #fff;
+}
+
+.cv-preview iframe {
+  border: 2px solid #333;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
+
+
 
 
 .contact {
