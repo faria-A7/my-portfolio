@@ -585,6 +585,27 @@ body {
   line-height: 1.6;
 }
 
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+
+
+
+
 .contact {
   margin-top: 2rem;
   padding: 1rem 2rem;

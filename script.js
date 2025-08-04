@@ -22,3 +22,38 @@ window.onclick = function (event) {
 }
 
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const typewriters = document.querySelectorAll(".typewriter");
+
+  function typeText(el, text, delay = 100, callback = null) {
+    let i = 0;
+    el.textContent = ""; // clear before starting
+
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+      } else {
+        clearInterval(interval);
+        if (callback) callback();
+      }
+    }, delay);
+  }
+
+  // Sequential typing: name first, then title
+  if (typewriters.length >= 2) {
+    const [nameEl, titleEl] = typewriters;
+    const nameText = nameEl.dataset.text;
+    const titleText = titleEl.dataset.text;
+
+    typeText(nameEl, nameText, 100, () => {
+      setTimeout(() => {
+        typeText(titleEl, titleText, 100);
+      }, 500);
+    });
+  }
+});
