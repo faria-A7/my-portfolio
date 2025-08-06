@@ -147,7 +147,7 @@ body {
 
 .about p, .experience-item p, .education-item p, .project-item p {
   line-height: 1.6;
-  color: #a2a1a1;
+  color: #b7b6b6;
   text-align: justify;
 }
 
@@ -161,7 +161,7 @@ body {
 }
 
 .experience-item a {
-  color: #ADD8E6;
+  color: #46bee6;
   text-decoration: none;
 }
 
