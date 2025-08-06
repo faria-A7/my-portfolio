@@ -434,7 +434,7 @@ body {
 }
 
 .site-work-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.03);
   box-shadow: 0 6px 20px rgb(106, 243, 211);
 }
 
@@ -517,23 +517,6 @@ body {
   padding: 25px;
 }
 
-/* ========== Card Styling ========== */
-.award-card {
-  background-color: #1f1f1f;
-  border: 1px solid #444;
-  padding: 20px;
-  border-radius: 10px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,191,255, 0.5);
-  transition: all 0.3s ease;
-}
-
-.award-card:hover {
-  background-color: #2a2a2a;
-  transform: translateY(-6px);
-}
 
 
 
@@ -705,7 +688,7 @@ body {
   border-radius: 8px;
   padding: 25px;
   margin: 10px 0;
-  box-shadow: 0 0 15px rgba(0,191,255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.612);
 }
 
 .card.no-img h4 {
