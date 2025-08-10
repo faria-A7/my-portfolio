@@ -19,6 +19,8 @@ body {
 
 
 .navbar {
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgb(224, 207, 54) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,13 +39,13 @@ body {
 }
 
 .nav-links a {
-  color: #ccc;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-links a:hover {
-  color: #00bfff;
+  color: #5c5c5c;
 }
 
 .hero {
@@ -108,7 +110,7 @@ body {
 
 .socials a[href^="mailto"] i { color: #D44638; }
 .socials a[href*="linkedin.com"] i { color: #0077B5; }
-.socials a[href*="github.com"] i { color: #323232; }
+.socials a[href*="github.com"] i { color: #393939; }
 .socials a[href*="scholar.google.com"] i { color: #4285F4; }
 .socials a[href*="researchgate.net"] i { color: #00CCBB; }
 .socials a[href*="kaggle.com"] i { color: #20BEFF; }
