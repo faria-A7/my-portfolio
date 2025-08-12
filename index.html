@@ -114,14 +114,14 @@
     <p><strong class="highlight-role">- Thesis Grade: </strong>4.00 / 4.00</p>
     <p><strong class="highlight-role">- Overview:</strong> I have worked under the supervision of "Prof. Dr. MohammadNurul Huda" to developed a hybrid Deep Learning pipeline that is able to detect pedestrian non-compliance behavior in urban traffic environments to mitigate hazardous outcomes enhancing road safety.</p>
     <p><strong class="highlight-role">- Dataset:</strong> Our own real-world annotated image dataset containing more than 5,000 images of pedestrians on the city roads.</p>
-    <p><strong class="highlight-role">- Models:</strong> Implemented a couple of Deep Learning models and Interpretable AI for transparency and accuracy.</p>
+    <p><strong class="highlight-role">- Models:</strong> Swin Transformer (Swin-T) for feature extraction and YOLOv12 for detection with Interpretable AI for transparency and accuracy.</p>
     <br>
     <a href="https://www.youtube.com/watch?v=wogSMBbIo1U&t=58s" class="modal-btn" target="_blank">See Video Demostration</a>
   </div> 
 </div>
 
-    </div>
-  </section>
+</div>
+</section>
 
   <section class="technical-skills" id="skills">
   <h2>Technical Skills</h2>
@@ -294,33 +294,78 @@
   </div>
   </div>
 
-  <br>
-  <br>
   
   <div class="portfolio-category">
     <br>
   <h3>🏆 Awards and Achievements</h3>
   <div class="card-grid">
     <!-- Card 1 -->
-    <div class="award-card" onclick="openModal('modal1')">
+    <div class="award-card" onclick="openModal('awardModal1')">
       <h4>50% Merit Scholarship, UIU</h4>
     </div>
 
     <!-- Card 2 -->
-    <div class="award-card" onclick="openModal('modal2')">
+    <div class="award-card" onclick="openModal('awardModal2')">
       <h4>2nd Runner-Up, UIU CSE Project Show</h4>
     </div>
 
     <!-- Card 3 -->
-    <div class="award-card" onclick="openModal('modal3')">
+    <div class="award-card" onclick="openModal('awardModal3')">
       <h4>2nd Runner-Up, English Edge Competition</h4>
     </div>
 
     <!-- Card 4 -->
-    <div class="award-card" onclick="openModal('modal4')">
+    <div class="award-card" onclick="openModal('awardModal4')">
       <h4>200,000 BDT Research Grant</h4>
     </div>
   </div>
+
+
+<!-- Modal 1: Scholarship -->
+<div id="awardModal1" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('awardModal1')">&times;</span>
+    <h2>50% Merit Scholarship, UIU</h2>
+    <img src="Images/scholarship.jpg" alt="Scholarship" class="modal-img">
+    <p>Awarded for being in <strong class="highlight-role">the top 6%</strong> of CSE department based on academic performance at United International University.</p>
+    <a href="https://uiu.ac.bd" class="modal-btn" target="_blank">Visit UIU</a>
+  </div>
+</div>
+
+<!-- Modal 2: Project Show -->
+<div id="awardModal2" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('awardModal2')">&times;</span>
+    <h2>2nd Runner-Up, UIU CSE Project Show - Fall 2024</h2>
+    <img src="Images/project_prize.jpg" alt="Project Show" class="modal-img">
+    <p>Ranked <strong class="highlight-role">2nd Runner-Up among 50+ university submissions</strong> for our research-based thesis work.</p>
+    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1736497299735/single-media-viewer/" class="modal-btn" target="_blank">View Here</a>
+  </div>
+</div>
+
+<!-- Modal 3: English Edge -->
+<div id="awardModal3" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('awardModal3')">&times;</span>
+    <h2>2nd Runner-Up, English Edge Competition 2021</h2>
+    <img src="Images/my_prize.jpg" alt="English Edge" class="modal-img">
+    <p>Ranked <strong class="highlight-role">2nd Runner-Up among 250+ participants</strong> exceptional public speaking, excellect performance delivery in English language, and communication capability.</p>
+    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1635468519123/single-media-viewer/" class="modal-btn" target="_blank">View Certificate</a>
+  </div>
+</div>
+
+<!-- Modal 4: Research Grant -->
+<div id="awardModal4" class="modal">
+  <div class="modal-content animate-modal">
+    <span class="close-btn" onclick="closeModal('awardModal4')">&times;</span>
+    <h2>Research Grant from IAR, UIU</h2>
+    <img src="Images/iar_uiu.jpg" alt="Grant Award" class="modal-img">
+    <p>Our research <strong class="highlight-role">"SafeTrax Smart Collision Prediction and Alert System Using IoT for Sustainable Traffic Safety"</strong> has received funding of 200,000.00 BDT (2000$) from the Institute for Advanced Research (IAR), United International University.</p>
+    <a href="https://doi.org/10.1109/ACCESS.2024.3524676" class="modal-btn" target="_blank">Early Access (IEEE Access - Q1)</a>
+  </div>
+</div>
+</div>
+
   
   <br>
   <br>
@@ -373,6 +418,7 @@
         <span class="tag literature">Literature</span>
       </div>
     </div>
+    
 
     <!-- Card 4 -->
     <div class="card no-img" data-aos="fade-up">
@@ -386,6 +432,7 @@
         <span class="tag social">Social Work</span>
       </div>
     </div>
+  </div>
   </div>
 
   <br>
@@ -401,7 +448,7 @@
   <div class="research-cards-row">
   
     <!-- Card 1 -->
-    <div class="research-card-rect" onclick="openModal('modal1')">
+    <div class="research-card-rect" onclick="openModal('researchModal1')">
       <div class="card-header-rect header-blue">
         Deciphering Patterns: A Comparative Study of Random Forests and Clustering Algorithm with Cluster-Specified Decision Trees
       </div>
@@ -416,7 +463,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="research-card-rect" onclick="openModal('modal2')">
+    <div class="research-card-rect" onclick="openModal('researchModal2')">
       <div class="card-header-rect header-green">
         <br>
         PDF-Malware-Inspector: A Deep Learning Based Detection of Document Based Malware in Email Spam
@@ -433,7 +480,7 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="research-card-rect" onclick="openModal('modal3')">
+    <div class="research-card-rect" onclick="openModal('researchModal3')">
       <div class="card-header-rect header-orange">
         <br>
         <br>
@@ -450,14 +497,14 @@
         <p>4. Reviews and evaluates defense strategies to secure AI-based healthcare systems.</p>
       </div>
     </div>
-
   </div>
-</div>
+  </div>
+  
 
-<!-- Modals -->
-<div id="modal1" class="modal">
+  <!-- Modals -->
+  <div id="researchModal1" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <span class="close" onclick="closeModal('researchModal1')">&times;</span>
     <h3> <strong class="highlight-role"> Key Research Contributions</strong> </h3>
     <br>
     <ul>
@@ -467,11 +514,11 @@
       <li>Opening avenues for optimizing ensemble learning with clustering.</li>
     </ul>
   </div>
-</div>
+  </div>
 
-<div id="modal2" class="modal">
+  <div id="researchModal2" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <span class="close" onclick="closeModal('researchModal2')">&times;</span>
     <h3> <strong class="highlight-role"> Key Research Contributions</strong> </h3>
     <br>
     <ul>
@@ -481,11 +528,11 @@
       <li>Contribution toward scalable, intelligent malware detection.</li>
     </ul>
   </div>
-</div>
+  </div>
 
-<div id="modal3" class="modal">
+  <div id="researchModal3" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <span class="close" onclick="closeModal('researchModal3')">&times;</span>
     <h3> <strong class="highlight-role"> Key Research Contributions</strong> </h3>
     <br>
     <ul>
@@ -495,7 +542,9 @@
       <li>Review of defense strategies to protect AI-enabled healthcare.</li>
     </ul>
   </div>
-</div>
+  </div>
+  
+  
 
   <br>
   <br>
@@ -511,59 +560,13 @@
       <a href="https://anupsidedownhedonist.wordpress.com/" target="_blank" class="card-button">Visit</a>
     </div>
   </div>
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- Modal 1: Scholarship -->
-<div id="modal1" class="modal">
-  <div class="modal-content animate-modal">
-    <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
-    <h2>50% Merit Scholarship, UIU</h2>
-    <img src="Images/scholarship.jpg" alt="Scholarship" class="modal-img">
-    <p>Awarded for being in <strong class="highlight-role">the top 6%</strong> of CSE department based on academic performance at United International University.</p>
-    <a href="https://uiu.ac.bd" class="modal-btn" target="_blank">Visit UIU</a>
   </div>
+
 </div>
 
-<!-- Modal 2: Project Show -->
-<div id="modal2" class="modal">
-  <div class="modal-content animate-modal">
-    <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
-    <h2>2nd Runner-Up, UIU CSE Project Show - Fall 2024</h2>
-    <img src="Images/project_prize.jpg" alt="Project Show" class="modal-img">
-    <p>Ranked <strong class="highlight-role">2nd Runner-Up among 50+ university submissions</strong> for our research-based thesis work.</p>
-    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1736497299735/single-media-viewer/" class="modal-btn" target="_blank">View Here</a>
-  </div>
-</div>
 
-<!-- Modal 3: English Edge -->
-<div id="modal3" class="modal">
-  <div class="modal-content animate-modal">
-    <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
-    <h2>2nd Runner-Up, English Edge Competition 2021</h2>
-    <img src="Images/my_prize.jpg" alt="English Edge" class="modal-img">
-    <p>Ranked <strong class="highlight-role">2nd Runner-Up among 250+ participants</strong> exceptional public speaking, excellect performance delivery in English language, and communication capability.</p>
-    <a href="https://www.linkedin.com/in/faria-akter-004/overlay/1635468519123/single-media-viewer/" class="modal-btn" target="_blank">View Certificate</a>
-  </div>
-</div>
 
-<!-- Modal 4: Research Grant -->
-<div id="modal4" class="modal">
-  <div class="modal-content animate-modal">
-    <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
-    <h2>Research Grant from IAR, UIU</h2>
-    <img src="Images/iar_uiu.jpg" alt="Grant Award" class="modal-img">
-    <p>Our research <strong class="highlight-role">"SafeTrax Smart Collision Prediction and Alert System Using IoT for Sustainable Traffic Safety"</strong> has received funding of 200,000.00 BDT (2000$) from the Institute for Advanced Research (IAR), United International University.</p>
-    <a href="https://doi.org/10.1109/ACCESS.2024.3524676" class="modal-btn" target="_blank">Early Access (IEEE Access - Q1)</a>
-  </div>
-</div>
+
 
 
 <section id="cv" class="cv-section">
