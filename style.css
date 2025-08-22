@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: 'Fira Code', monospace;
   background-color: #0d0d0d;
@@ -16,6 +21,13 @@ body {
   padding: 1rem;
 }
 
+
+/* For smooth highlighted navbar*/
+nav ul li a.active {
+  color: orange;   /* or your brand color */
+  font-weight: bold;
+  border-bottom: 2px solid orange;
+}
 
 
 .navbar {
