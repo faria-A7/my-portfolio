@@ -998,7 +998,94 @@ nav ul li a.active {
 /* ===================== */
 /*  Sketch Gallery Styles */
 /* ===================== */
+/* Sketch Gallery Section */
+.gallery-section {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0d0d0d;
+}
 
+.gallery-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  color: #ffee00;
+}
+
+.gallery-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.5rem;
+  width: 1000px;
+  height: 2px;
+  background-color: #ffe100;
+  transform: translateX(-50%);
+}
+
+.sketch-album {
+  max-height: 1200px; /* Adjusted for 7 rows + cover */
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ffee00 #1a1a1a; /* Thumb and track colors */
+}
+
+.sketch-album::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sketch-album::-webkit-scrollbar-thumb {
+  background-color: #dbae25;
+  border-radius: 4px;
+}
+
+.sketch-album::-webkit-scrollbar-track {
+  background-color: #1a1a1a;
+}
+
+.cover-item {
+  margin-bottom: 1.5rem;
+}
+
+.cover-item img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.sketch-item {
+  margin: 0; /* Reset margin for grid */
+}
+
+.sketch-item img {
+  width: 100%;
+  max-height: 300px; /* Adjusted for grid items */
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.sketch-caption {
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.sketch-caption h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
 
 
 
@@ -1104,3 +1191,7 @@ nav ul li a.active {
     align-items: center;
   }
 }
+
+
+
+

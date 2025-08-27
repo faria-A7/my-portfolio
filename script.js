@@ -127,11 +127,3 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
-
-
-// =====================
-// Gallery Lightbox
-// =====================
-
-
