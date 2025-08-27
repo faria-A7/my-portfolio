@@ -935,6 +935,66 @@ nav ul li a.active {
 
 
 
+/* Sketch Gallery Section */
+#sketch-gallery {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fafafa;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.caption {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+
+/* Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+/* Footer Notes*/
 .contact {
   margin-top: 2rem;
   padding: 1rem 2rem;
