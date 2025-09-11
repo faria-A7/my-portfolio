@@ -273,7 +273,7 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   background-color: #1a1a1a;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   color: #fff;
 }
