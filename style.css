@@ -1248,12 +1248,12 @@ nav ul li a.active {
 
 
 
-/* Default (light theme) */
+/* Default: Dark Theme */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --link-color: #0077cc;
-  --card-bg: #f9f9f9;
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #66b3ff;
+  --card-bg: #1e1e1e;
 }
 
 body {
@@ -1262,22 +1262,14 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-a {
-  color: var(--link-color);
+/* Light Mode overrides */
+body.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --link-color: #0077cc;
+  --card-bg: #f9f9f9;
 }
 
-.card {
-  background: var(--card-bg);
-  transition: all 0.3s ease-in-out;
-}
-
-/* Dark mode overrides */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --link-color: #66b3ff;
-  --card-bg: #1e1e1e;
-}
 
 
 
