@@ -63,6 +63,8 @@ nav ul li a.active {
 
 
 
+
+
 /* Dropdown container */
 .navbar ul li.dropdown {
   position: relative;
@@ -105,6 +107,11 @@ nav ul li a.active {
   background: #b6b6b6;
   color: #000;
 }
+
+
+
+
+
 
 
 
@@ -209,7 +216,7 @@ nav ul li a.active {
 
 .about p, .experience-item p, .education-item p, .project-item p {
   line-height: 1.6;
-  color: #b7b6b6;
+  color: #727171;
   text-align: justify;
 }
 
@@ -533,7 +540,7 @@ nav ul li a.active {
 .card-body-rect {
   padding: 19px;
   font-size: 1.0rem;
-  color: #c7c6c6;
+  color: #727171;
   flex-grow: 1;
 }
 
@@ -1211,7 +1218,51 @@ nav ul li a.active {
   margin-top: 0.5rem;
 }
 
-/* ... (keep remaining styles unchanged) ... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default (light theme) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --link-color: #0077cc;
+  --card-bg: #f9f9f9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.card {
+  background: var(--card-bg);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #66b3ff;
+  --card-bg: #1e1e1e;
+}
+
+
 
 
 

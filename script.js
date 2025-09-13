@@ -1,37 +1,31 @@
+// ================= Modal Functions =================
 function openModal(id) {
   const modal = document.getElementById(id);
-  if (modal) {
-    modal.style.display = "block";
-  }
+  if (modal) modal.style.display = "block";
 }
 
 function closeModal(id) {
   const modal = document.getElementById(id);
-  if (modal) {
-    modal.style.display = "none";
-  }
+  if (modal) modal.style.display = "none";
 }
 
-// Close if clicking outside the modal box
-window.onclick = function (event) {
-  document.querySelectorAll('.modal').forEach(modal => {
+// Close modal when clicking outside
+window.addEventListener("click", (event) => {
+  document.querySelectorAll(".modal").forEach((modal) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
-}
+});
 
-
-
-
-
-
+// ================= On Page Load =================
 document.addEventListener("DOMContentLoaded", () => {
+  // ---- Typewriter Effect ----
   const typewriters = document.querySelectorAll(".typewriter");
 
   function typeText(el, text, delay = 100, callback = null) {
     let i = 0;
-    el.textContent = ""; // clear before starting
+    el.textContent = "";
 
     const interval = setInterval(() => {
       if (i < text.length) {
@@ -44,66 +38,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }, delay);
   }
 
-  // Sequential typing: name first, then title
   if (typewriters.length >= 2) {
     const [nameEl, titleEl] = typewriters;
-    const nameText = nameEl.dataset.text;
-    const titleText = titleEl.dataset.text;
-
-    typeText(nameEl, nameText, 100, () => {
+    typeText(nameEl, nameEl.dataset.text, 100, () => {
       setTimeout(() => {
-        typeText(titleEl, titleText, 100);
+        typeText(titleEl, titleEl.dataset.text, 100);
       }, 500);
     });
   }
+
+  // ---- Theme Toggle (Dark/Light Mode) ----
+  const toggleBtn = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleBtn.textContent = "☀️";
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      } else {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  }
+
+  // ---- Scroll Animation (AOS) ----
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
 });
-
-
-
-AOS.init({
-    duration: 800, // animation duration in ms
-    once: true     // only animate once
-  });
-
-
-  function openModal(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-// Optional: Close modal if clicking outside the modal content
-window.onclick = function(event) {
-  const modals = document.querySelectorAll('.modal');
-  modals.forEach(modal => {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  });
-};
-
-
-
-
-function openModal(id) {
-  document.getElementById(id).style.display = "block";
-}
-
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
-}
-
-window.onclick = function(event) {
-  document.querySelectorAll(".modal").forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-}
-
-
 
 // ================= Active Navbar Highlight =================
 window.addEventListener("scroll", () => {
@@ -112,7 +84,7 @@ window.addEventListener("scroll", () => {
 
   sections.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 150; // adjust offset for earlier activation
+    let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
@@ -126,4 +98,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
