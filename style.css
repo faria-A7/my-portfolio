@@ -1066,6 +1066,111 @@ nav ul li a.active {
 
 
 
+/* === Modern Research Card Styles === */
+.research-pub-card {
+  display: flex;
+  gap: 20px;
+  background: #081021; /* Dark navy-black background */
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.research-pub-card:hover {
+  transform: translateY(-5px);
+  border-color: #00bfff;
+  box-shadow: 0 10px 10px rgba(24, 96, 120, 0.941);
+}
+
+.pub-card-icon {
+  background: #1e293b;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pub-card-icon i {
+  color: #ffffff; /* Teal icon color */
+  font-size: 1.5rem;
+}
+
+.pub-card-content {
+  flex-grow: 1;
+}
+
+.pub-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Status Badges */
+.badge-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.in-progress {
+  background: rgba(254, 240, 138, 0.1);
+  color: #facc15; /* Yellow */
+  border: 1px solid rgba(250, 204, 21, 0.2);
+}
+
+
+.pub-year {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.pub-card-title {
+  font-size: 1.25rem;
+  color: #2dd4bf !important;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.pub-card-status-text {
+  color: #ffffff !important; /* Teal accent */
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.pub-card-description {
+  color: #94a3b8 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  .research-pub-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+
+
+
+
+
 
 /* ===================== */
 /*  Sketch Gallery Styles */
