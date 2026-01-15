@@ -1076,7 +1076,7 @@ nav ul li a.active {
   padding: 24px;
   margin-bottom: 20px;
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .research-pub-card:hover {
@@ -1167,6 +1167,109 @@ nav ul li a.active {
 
 
 
+
+
+
+
+
+/* === Modern Project Card Styles === */
+.modern-project-card {
+  display: flex;
+  gap: 20px;
+  background: #081021; /* Dark navy-black background */
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: left;
+  transition: all 0.5s ease;
+}
+
+.modern-project-card:hover {
+  transform: translateY(-8px);
+  border-color: #00bfff;
+  box-shadow: 0 12px 40px rgba(0, 191, 255, 0.15);
+}
+
+.project-card-icon {
+  background: #1e293b;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.project-card-icon i {
+  color: #2dd4bf; /* Teal accent icon */
+  font-size: 1.6rem;
+}
+
+.project-card-content {
+  flex-grow: 1;
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Category Badges */
+.badge-category {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ai-badge { background: rgba(139, 92, 246, 0.1); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.2); }
+.web-badge { background: rgba(14, 165, 233, 0.1); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.2); }
+.fin-badge { background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.2); }
+
+.project-git-link i {
+  color: #94a3b8;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.project-git-link:hover i {
+  color: #ffffff;
+}
+
+.project-card-title {
+  font-size: 1.35rem;
+  color: #ffffff !important;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.project-tech-highlight {
+  color: #2dd4bf !important; /* Matches "Under Review" accent color */
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.project-description-text {
+  color: #94a3b8 !important;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 650px) {
+  .modern-project-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
 
 
 
