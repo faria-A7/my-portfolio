@@ -16,9 +16,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: 56center;
   align-items: center;
   padding: 1rem;
+  padding-top: 6rem; /* ensure content sits below fixed navbar */
 }
 
 
@@ -42,13 +43,13 @@ nav ul li a.active {
   
   /* Glassmorphism Effect */
   background: rgba(13, 13, 13, 0.1); /* Very transparent base */
-  backdrop-filter: blur(12px); /* The frosted glass effect */
+  backdrop-filter: blur(5px); /* The frosted glass effect */
   -webkit-backdrop-filter: blur(12px); /* Safari support */
   
   /* Subtle border to define the edge */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 /* Ensure the background adapts when in Light Mode */
@@ -161,8 +162,13 @@ body.light-mode .navbar {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  color: #00bfff;
+  /* larger heading and gradient text */
+  font-size: 5rem;
+  /* stronger aqua-blue gradient for better visibility */
+  background: linear-gradient(90deg, #007fff, #00ffd5, #701ced);
+  background-clip: text; /* standard property for compatibility */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 0.3rem;
 }
 
@@ -225,7 +231,7 @@ body.light-mode .navbar {
 }
 
 .about h2, .experience h2, .education h2, .technical-skills h2, .portfolio h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -237,15 +243,15 @@ body.light-mode .navbar {
   bottom: -0.5rem;
   width: 1000px;
   height: 2px;
-  background-color: #00bfff;
+  background-color: #42dabe;
   transform: translateX(-50%);
 }
 
-.about h2 { color: #00bfff; }
-.experience h2 { color: #00bfff; }
-.education h2 { color: #00bfff; }
+.about h2 { color: #42dabe; }
+.experience h2 { color: #42dabe; }
+.education h2 { color: #42dabe; }
 .technical-skills h2 { color: #ff4500; }
-.portfolio h2 { color: #00bfff; }
+.portfolio h2 { color: #42dabe; }
 
 .about p, .experience-item p, .education-item p, .project-item p {
   line-height: 1.6;
