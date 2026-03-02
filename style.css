@@ -13,7 +13,7 @@ body {
   font-family: 'Fira Code', monospace;
   background-color: #0d0d0d;
   color: #fff;
-  min-height: 100vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: 56center;
@@ -365,15 +365,34 @@ body.light-mode .navbar {
 
 .skill-item {
   display: flex;
+  color: var(--text-primary);
+  font-weight: 500;
   align-items: center;
-  background-color: #1a1a1a;
-  padding: 0.5rem 2rem;
-  border-radius: 0.5rem;
-  color: #fff;
+  gap: 12px;
+  background: var(--card-bg);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .skill-item i {
   margin-right: 0.5rem;
+  font-size: 1.4rem; /* Makes the icon clearly visible */
+  width: 24px;
+  text-align: center;
+}
+
+
+body.light-mode .skill-item {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--card-border);
 }
 
 .skill-item i.fab.fa-python { color: #3776AB; }
@@ -389,6 +408,10 @@ body.light-mode .navbar {
 .skill-item i.fab.fa-js { color: #F7DF1E; }
 .skill-item i.fab.fa-node-js { color: #68A063; }
 .skill-item i.fab.fa-php { color: #777BB4; }
+.skill-item i.fab.fa-rocket { color: #000000; }     /* Next.js Black (will look great on glass background) */
+.skill-item i.fas.fa-bolt { color: #05998b; }       /* FastAPI Teal */
+.skill-item i.fab.fa-python { color: #3776AB; }     /* Django/Python Blue/Yellow */
+.skill-item i.fas.fa-server { color: #336791; }     /* PostgreSQL Blue */
 .skill-item i.fas.fa-database { color: #4DB33D; }
 .skill-item i.fas.fa-database:nth-child(2) { color: #F29111; }
 .skill-item i.fab.fa-git-alt { color: #F05032; }
@@ -1502,10 +1525,41 @@ body {
 
 /* Light Mode overrides */
 body.light-mode {
+  /* --bg-color: #f8fafc; */
   --bg-color: #ffffff;
-  --text-color: #868585;
+  --text-color: #111827;    /* Deep black-blue for headings */
+  --text-muted: #868c95;    /* Dark gray for descriptions and bio */
   --link-color: #0077cc;
   --card-bg: #f9f9f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-color: #0d9488;
+  /*--card-bg: #ffffff; */
+  --card-border: #b2bac4; /* Slightly darker border for visibility */
+  --nav-bg: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 2. Fix for the Typewriter <h2> and Experience <h3> titles */
+body.light-mode .hero-text h2, 
+body.light-mode .experience-item h3,
+body.light-mode .education-item h3,
+body.light-mode .project-item h3,
+body.light-mode .portfolio-item h4 {
+  color: var(--text-color) !important;
+}
+
+/* 3. Fix for general paragraph text and Bio visibility */
+body.light-mode p, 
+body.light-mode .hero-text .bio,
+body.light-mode .experience-item p,
+body.light-mode .education-item p {
+  color: var(--text-muted) !important;
+}
+
+/* 4. Ensure the typewriter cursor is visible in Light Mode */
+body.light-mode .typewriter {
+  border-right: 2px solid var(--text-color);
 }
 
 
